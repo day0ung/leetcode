@@ -7,7 +7,7 @@ class Solution {
         });
         
         int[] list = map.keySet().stream()
-                .sorted(Comparator.comparingInt(key ->                      map.get(key).size()).reversed())
+                .sorted(Comparator.comparingInt(key -> map.get(key).size()).reversed())
                 .limit(k)
                 .mapToInt(Integer::intValue).toArray();
         return list;
